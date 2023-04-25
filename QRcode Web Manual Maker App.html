@@ -1548,21 +1548,7 @@
 		}
 
 		function tableInitiate2() {
-			tableInitiate();
-			for (i = 0; i < 35; i++) {
-				for (a = 0; a < 35; a++) {
-					//console.log(a); console.log(i);
-					if (i < 10 && a < 10) {
-						if (document.getElementById("l0" + i + "c0" + a).classList.contains("noir")) { document.getElementById("l0" + i + "c0" + a).click(); }
-					} else if (i < 10 && a >= 10) {
-						if (document.getElementById("l0" + i + "c" + a).classList.contains("noir")) { document.getElementById("l0" + i + "c" + a).click(); }
-					} else if (i >= 10 && a < 10) {
-						if (document.getElementById("l" + i + "c0" + a).classList.contains("noir")) { document.getElementById("l" + i + "c0" + a).click(); }
-					} else if (i >= 10 && a >= 10) {
-						if (document.getElementById("l" + i + "c" + a).classList.contains("noir")) { document.getElementById("l" + i + "c" + a).click(); }
-					}
-				}
-			}
+			document.querySelectorAll('.case').forEach(e => e.click());
 		}
 
 		function afficherCle(id) {
